@@ -1,0 +1,1 @@
+Employee ID (integer), First Name, Family Name, City of Residence, Hire Year (integer), Hourly Rate (integer), Number of Hours of Current Term (integer), Number of Student in Class (integer)

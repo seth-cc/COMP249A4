@@ -1,0 +1,5 @@
+2, Archibald, Haddock, Brussels, 1941, UGRAD, 3, 10
+4, Archibald, Haddock, Brussels, 1941, UGRAD, 3, 10
+5, Hippolyte, Bergamotte, Brussels, 1949, GRAD, 2, 7
+8, Hippolyte, Bergamotte, Brussels, 1949, GRAD, 2, 7
+9, Archibald, Haddock, Brussels, 1941, UGRAD, 3, 10
