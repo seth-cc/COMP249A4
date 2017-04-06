@@ -4,8 +4,8 @@ public class Student extends Person {
     private static final Scanner SC = new Scanner(System.in);
 
     public enum Type {GRAD, UGRAD, ALUM}
-    private static final double UGRAD_RATE = 18.25;
-    private static double GradRate = UGRAD_RATE * 1.2;
+    public static final double UGRAD_RATE = 18.25;
+    public static final double GRAD_RATE = UGRAD_RATE * 1.2;
     private Type type;
     private int classNum;
     private int hours;

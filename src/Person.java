@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Person {
+public class Person implements Ordered {
     private static final Scanner SC = new Scanner(System.in);
     private int id;
     private String fname;
@@ -62,6 +62,28 @@ public class Person {
         return new Person(person);
     }
 
+
+    public boolean precedes(Object obj){
+        try{
+            Person person_obj = (Person) obj;
+            return (getStartYear() < person_obj.getStartYear());
+        }
+        catch (ClassCastException e){
+            System.out.println("Object is not a person!");
+            return false;
+        }
+    }
+
+    public boolean follows(Object obj){
+        try{
+            Person person_obj = (Person) obj;
+            return (getStartYear() > person_obj.getStartYear());
+        }
+        catch (ClassCastException e){
+            System.out.println("Object is not a person!");
+            return false;
+        }
+    }
     // getters and setters
 
     public int getId() {

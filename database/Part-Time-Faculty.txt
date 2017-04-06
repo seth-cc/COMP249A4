@@ -1,1 +1,3 @@
-Employee ID (integer), First Name, Family Name, City of Residence, Hire Year (integer), Hourly Rate (integer), Number of Hours of Current Term (integer), Number of Student in Class (integer)
+1, Rick, Deckard, San Francisco, 2019, 30, 10, 62
+2, Roy, Baty, Mars, 2019, 20, 6, 45
+3, Harry, Bryant, San Francisco, 2019, 50, 8, 20

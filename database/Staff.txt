@@ -1,0 +1,3 @@
+1, John, Smith, Montreal, 2017, 65720.0, E
+2, Jane, Smith, Montreal, 2017, 60000.0, E
+3, Thomas, Smith, Montreal, 2017, 75600.0, E
