@@ -2,7 +2,7 @@
 public class Driver {
 
 	public static void main(String[] args) {
-		Bill testBill = new Bill();
+		BillDriver testBill = new BillDriver();
 		System.out.println("Initial file contents: \n" + testBill.printBills());
 		
 		System.out.println("Adding bills...");

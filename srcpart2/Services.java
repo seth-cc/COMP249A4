@@ -1,6 +1,6 @@
+import java.util.Scanner;
 
-
-public class Services extends Bill {
+public class Services implements Bill {
 	
 	private long supplierId;
 	private String serviceName;
@@ -10,6 +10,7 @@ public class Services extends Bill {
 	private int numHours;
 	private double hourRate;
 	private double totalBill;
+
 
 	public Services(String[] tokens){
 		supplierId = Long.parseLong(tokens[0]);
@@ -123,4 +124,17 @@ public class Services extends Bill {
 	public void setTotalBill(double totalBill) {
 		this.totalBill = totalBill;
 	}
+	public void update(){
+		Scanner key = new Scanner(System.in);
+		System.out.println("You are attempting to update a service bill. You are currently able to update the number of hours and the total bill. \nPlease enter both new values separated by a space: ");
+		setNumHours(key.nextInt());
+		setTotalBill(key.nextDouble());
+	}
+	public void setSubType(subscription_type sub){
+		
+	}
+	public double getMoney(){
+		return getTotalBill();
+	}
+	
 }

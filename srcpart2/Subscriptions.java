@@ -1,6 +1,6 @@
+import java.util.Scanner;
 
-
-public class Subscriptions extends Bill {
+public class Subscriptions implements Bill {
 	
 	private long supplierId;
 	private String supplierName, companyName;
@@ -121,6 +121,38 @@ public class Subscriptions extends Bill {
 		this.subAmt = subAmt;
 	}
 	
-
+	public void update(){
+		Scanner key = new Scanner(System.in);
+		System.out.println("You are attempting to update a subscription. You are currently able to update the type of subscription. \nPlease choose from the following list:");
+		System.out.println("(1)WEEKLY \n(2)BIWEEKLY \n(3)MONTHLY \n(4)BIMONTHLY \n(5)TRIMESTER \n(6)SEMESTER \n(7)YEARLY");
+		switch(key.nextInt()){
+		case 1 : setSubType(subscription_type.WEEKLY);
+				break;
+		case 2 : setSubType(subscription_type.BIWEEKLY);
+		break;
+		case 3 : setSubType(subscription_type.MONTHLY);
+		break;
+		case 4 : setSubType(subscription_type.BIMONTHLY);
+		break;
+		case 5 : setSubType(subscription_type.TRIMESTER);
+		break;
+		case 6 : setSubType(subscription_type.SEMESTER);
+		break;
+		case 7 : setSubType(subscription_type.YEARLY);
+		break;
+		default : System.out.println("That is not an option!");
+		break;
+			
+		}
+	}
+	public void setNumHours(int anum){
+		
+	}
+	public void setTotalBill(double anum){
+		
+	}
+	public double getMoney(){
+		return getSubAmt();
+	}
 
 }
