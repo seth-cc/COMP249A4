@@ -1,5 +1,10 @@
 import java.util.Scanner;
 
+//-----------------------------------------------------
+//Assignment #4
+//
+//Written by: Seth Cole - 27795580, and Anne Ehresmann - 27858906
+//-----------------------------------------------------
 public class Services implements Bill {
 	
 	private long supplierId;
@@ -12,6 +17,9 @@ public class Services implements Bill {
 	private double totalBill;
 
 
+	/**Parameterized constructor
+	 * @param tokens Array of tokens of type string representing their associated attribute
+	 */
 	public Services(String[] tokens){
 		supplierId = Long.parseLong(tokens[0]);
 		serviceName = tokens[1];
@@ -26,6 +34,7 @@ public class Services implements Bill {
 	public String toString(){
 		return supplierId +" "+ serviceName + " " + companyName + " " + startYear +" "+ billNumber+" "+numHours+" "+hourRate+" "+totalBill;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -124,6 +133,9 @@ public class Services implements Bill {
 	public void setTotalBill(double totalBill) {
 		this.totalBill = totalBill;
 	}
+	/** Allows for updating of the numHours and totalBill attributes
+	 * @see Bill#update()
+	 */
 	public void update(){
 		Scanner key = new Scanner(System.in);
 		System.out.println("You are attempting to update a service bill. You are currently able to update the number of hours and the total bill. \nPlease enter both new values separated by a space: ");

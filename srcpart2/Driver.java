@@ -1,4 +1,8 @@
-
+//-----------------------------------------------------
+//Assignment #4
+//
+//Written by: Seth Cole - 27795580, and Anne Ehresmann - 27858906
+//-----------------------------------------------------
 public class Driver {
 
 	public static void main(String[] args) {

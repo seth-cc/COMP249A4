@@ -1,13 +1,20 @@
 import java.io.*;
 import java.util.Scanner;
-
+//-----------------------------------------------------
+//Assignment #4
+//
+//Written by: Seth Cole - 27795580, and Anne Ehresmann - 27858906
+//-----------------------------------------------------
 public class BillDriver {
 	
 	
-	Scanner read = null;
-	PrintWriter pw = null;
-	Scanner key = null;
+	private Scanner read = null;
+	private PrintWriter pw = null;
+	private Scanner key = null;
 	
+	/** Adds a new bill to the file Bills.txt
+	 * @param newBill An object of type bill
+	 */
 	public void addBill(Bill newBill){
 		MyLinkedList<Bill> Bills = importBills();
 		boolean exists = false;
@@ -36,6 +43,9 @@ public class BillDriver {
 	
 	}
 	
+	/** A method which will call the update method of the specified bill
+	 * @param billNum An integer value equal to that of the billNumber of the bill to be updated
+	 */
 	public void updateBill(int billNum){
 	
 		MyLinkedList<Bill> Bills = importBills();
@@ -70,6 +80,9 @@ public class BillDriver {
 				
 			}
 	
+	/** A method which will remove a bill from Bills.txt
+	 * @param supNum a Long equal to the supplier number of the bill to be removed
+	 */
 	public void removeBill(long supNum){
 		
 		MyLinkedList<Bill> Bills = importBills();
@@ -89,6 +102,10 @@ public class BillDriver {
 	}
 		
 		
+	/** A method to calculate the total bills associated with one supplier
+	 * @param supId A long equal to the supplierNumber of the supplier whos bills are to be calculated
+	 * @return Returns a value of type double representing the total bills
+	 */
 	public double findSupplierTotalBills(long supId){
 		MyLinkedList<Bill> Bills = importBills();
 
@@ -104,6 +121,9 @@ public class BillDriver {
 		
 	}
 	
+	/** A method finding the service with the highest cost and the lowest cost
+	 * @return Returns a string stating which services have the highest and lowest cost
+	 */
 	public String find_highest_and_lowest_service(){
 		MyLinkedList<Bill> Bills = importBills();
 		double highest = 0, lowest = 999999999;
@@ -125,6 +145,9 @@ public class BillDriver {
 		Services lowService = (Services)Bills.findAt(lowindex), highService = (Services)Bills.findAt(highindex);
 		return "The lowest cost service is " + lowService.getCompanyName() + ", they offer "+ lowService.getServiceName() + " services.\nThe highsest cost service is " +highService.getCompanyName() + ", They offer " +highService.getServiceName()+" services.";
 	}
+	/** A method for printing the contents of Bills.txt in the console
+	 * @return returns a string of all bills.
+	 */
 	public String printBills(){
 		MyLinkedList<Bill> Bills = importBills();
 		String ret = "";
@@ -135,6 +158,9 @@ public class BillDriver {
 		
 	}
 	
+	/** Private helper method for importing all bills into a list of type MyLinkedList<Bill>
+	 * @return Returns a MyLinkedList<Bill> that lists the content of Bills.txt
+	 */
 	private MyLinkedList<Bill> importBills(){
 		
 		MyLinkedList<Bill> Bills = new MyLinkedList<Bill>();

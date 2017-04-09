@@ -1,3 +1,8 @@
+//-----------------------------------------------------
+//Assignment #4
+//
+//Written by: Seth Cole - 27795580, and Anne Ehresmann - 27858906
+//-----------------------------------------------------
 import java.util.Scanner;
 
 public class Subscriptions implements Bill {
@@ -9,6 +14,9 @@ public class Subscriptions implements Bill {
 	private double subAmt;
 
 	
+	/**Parameterized constructor
+	 * @param tokens Array of tokens representing their associated values.
+	 */
 	public Subscriptions(String[] tokens){
 		
 		supplierId = Long.parseLong(tokens[0]);
@@ -121,6 +129,9 @@ public class Subscriptions implements Bill {
 		this.subAmt = subAmt;
 	}
 	
+	/** Presents options for updating the subscription type of the bill.
+	 * @see Bill#update()
+	 */
 	public void update(){
 		Scanner key = new Scanner(System.in);
 		System.out.println("You are attempting to update a subscription. You are currently able to update the type of subscription. \nPlease choose from the following list:");
